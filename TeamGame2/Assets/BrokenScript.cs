@@ -7,7 +7,7 @@ public class BrokenScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("something");
+        Debug.Log("dfgrswet");
     }
 
     // Update is called once per frame
