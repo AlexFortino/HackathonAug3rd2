@@ -8,6 +8,7 @@ public class BrokenScript : MonoBehaviour
     void Start()
     {
         Debug.Log("sb fgihs ivb jahbfhgatghgshhjtgs");
+        Debug.Log("dfgrswet");
     }
 
     // Update is called once per frame
