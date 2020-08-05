@@ -8,6 +8,8 @@ TagManager:
   - Film
   - Collectible
   - Doorway
+  - Light
+  - more light powerup
   layers:
   - Default
   - TransparentFX

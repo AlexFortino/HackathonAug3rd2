@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
     public Text chatObject;
     public int needcollectibles = 8;
+    public GameObject poweruplight;
 
     // Start is called before the first frame update
     void Start()
@@ -84,7 +85,19 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 /*dont have enough*/
+                chatObject.text = "Collect more films!";
             }
         }
+        if (other.gameObject.CompareTag("more light powerup"))
+        {
+            Destroy(other.gameObject);
+            poweruplight.SetActive(true);
+            Invoke("powerupoff", 5);
+        }
+
+    }
+    void powerupoff()
+    {
+        poweruplight.SetActive(false);
     }
 }
