@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,9 +10,12 @@ public class PlayerMovement : MonoBehaviour
     bool IsJumping = false;
     float Horizontal = 0;
     float Vertical = 0;
-    public int films = 0;
+    public int collectibles = 0;
     Camera cam;
     Rigidbody rb;
+    public Text chatObject;
+    public int needcollectibles = 8;
+    public GameObject poweruplight;
 
     // Start is called before the first frame update
     void Start()
@@ -65,10 +69,35 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Coin"))
+        if (other.gameObject.CompareTag("Collectible"))
         {
-            films = films + 1;
+            collectibles = collectibles + 1;
             Destroy(other.gameObject);
+            chatObject.text = "Films: " + collectibles;
         }
+        if (other.gameObject.CompareTag("Doorway"))
+        {
+            if (collectibles >= needcollectibles)
+            {
+                /*if you have enough */
+                chatObject.text = "You win!";
+            }
+            else
+            {
+                /*dont have enough*/
+                chatObject.text = "Collect more films!";
+            }
+        }
+        if (other.gameObject.CompareTag("more light powerup"))
+        {
+            Destroy(other.gameObject);
+            poweruplight.SetActive(true);
+            Invoke("powerupoff", 5);
+        }
+
+    }
+    void powerupoff()
+    {
+        poweruplight.SetActive(false);
     }
 }
