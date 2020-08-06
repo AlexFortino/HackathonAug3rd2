@@ -8,6 +8,7 @@ public class MainMenuButtons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Confined;
         
     }
 
