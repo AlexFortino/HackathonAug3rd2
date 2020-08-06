@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
@@ -81,6 +82,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 /*if you have enough */
                 chatObject.text = "You win!";
+                SceneManager.LoadScene("Menu Scene");
             }
             else
             {
