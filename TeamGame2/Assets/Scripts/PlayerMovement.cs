@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 /*if you have enough */
                 chatObject.text = "You win!";
-                SceneManager.LoadScene("Menu Scene");
+                GetComponent<YouDiedMenu>().EndGame(true);
             }
             else
             {
