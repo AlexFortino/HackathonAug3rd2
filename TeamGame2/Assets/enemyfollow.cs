@@ -26,7 +26,8 @@ public class enemyfollow : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")) {
             //end game
-            SceneManager.LoadScene("Menu Scene");
+            //SceneManager.LoadScene("Menu Scene");
+            Player.GetComponent<YouDiedMenu>().EndGame(false);
         }
 
     }
