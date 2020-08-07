@@ -139,9 +139,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0.83390886, b: 0.5330188, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 179
+  m_Intensity: 2
+  m_Range: 20
+  m_SpotAngle: 78.2
   m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
@@ -323,7 +323,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5489417876027237106}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -403,3 +403,4 @@ MonoBehaviour:
   collectibles: 0
   chatObject: {fileID: 0}
   needcollectibles: 8
+  poweruplight: {fileID: 0}
